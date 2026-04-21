@@ -1,0 +1,120 @@
+# Assignment 4 ****
+
+---
+
+## **Q1. Docker Compose: Nginx Static Website**
+
+### **Question**
+
+Create a Docker Compose setup to run an Nginx container that serves a custom HTML page.
+
+### **Requirements**
+
+1. Create a folder named website
+2. Create a file index.html with content:
+    
+    # **Hello from Docker Compose**
+    
+3. Use Docker Compose to:
+    - Run an Nginx container
+    - Map port 8080 to 80
+    - Mount website folder to /usr/share/nginx/html
+4. Open browser and verify output
+
+---
+
+## **Q2. Docker Compose: Python Script Container**
+
+### **Question**
+
+Run a simple Python script using Docker Compose.
+
+### **Requirements**
+
+1. Create a file app.py: print("Hello from Python Container")
+2. Create a Dockerfile to run this script
+3. Use Docker Compose to run this container
+4. Container should execute script and exit
+
+## **Q3. Docker Compose: MySQL with Volume**
+
+---
+
+### **Question**
+
+Create a MySQL container using Docker Compose with persistent storage.
+
+### **Requirements**
+
+1. Use MySQL image
+2. Set:
+    - root password
+    - database name
+3. Create a named volume
+4. Start container and:
+    - Enter MySQL using docker exec
+    - Create table test
+5. Restart container and verify data still exists
+
+## **Q4. Docker Swarm: Nginx Service**
+
+---
+
+### **Question**
+
+Deploy Nginx service in Docker Swarm.
+
+### **Requirements**
+
+1. Initialize swarm: docker swarm init
+2. Create service:
+    - Name nginx-service
+    - Image nginx
+    - Replicas 2
+3. Expose port 8080
+4. Verify using: docker service ls docker service ps nginx-service
+
+---
+
+## **Q5. Docker Swarm: Python Worker Service**
+
+### **Question**
+
+Deploy a Python script as a Swarm service.
+
+### **Requirements**
+
+1. Create app.py: import time while True: print("Running in Swarm...") time.sleep(5)
+2. Create Docker image
+3. Deploy service:
+    - Name python-service
+    - Replicas 3
+4. Check logs from different containers
+
+---
+
+## **Q.6 Python + Python (Multiple Services)**
+
+Create a Docker Compose setup with two Python containers:
+
+- service1
+- service2
+
+Each container should run a different Python script and print different messages.
+
+---
+
+## **Q7. MySQL + Backup Container**
+
+Create a Docker Compose setup with:
+
+- one MySQL container
+- one backup container
+
+The backup container should access MySQL data using a shared volume.
+
+---
+
+## Q. 8 Write a steps for kubernetes Installation (Minikube)
+
+---
